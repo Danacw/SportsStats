@@ -163,3 +163,5 @@ cython_debug/
 
 # Other
 config.py
+.DS_Store
+standings/.DS_Store
