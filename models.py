@@ -294,10 +294,10 @@ class Teams():
 
         # Serializing json
         json_object = json.dumps(response, indent=4)
-        with open("nba_2024.json", "w") as outfile:
+        with open("standings/nba/nba_league_data.json", "w") as outfile:
             outfile.write(json_object)
                        
-        with open('nba_2024.json') as f:
+        with open('standings/nba/nba_league_data.json') as f:
             d = json.load(f)
             results_set = d['resultSets']
         
@@ -321,10 +321,10 @@ class Teams():
         response = requests.get(url, headers=headers).json()
         json_object = json.dumps(response, indent=4)
         
-        with open('nhl_divisions.json', 'w') as outfile:
+        with open('standings/nhl/nhl_divisions.json', 'w') as outfile:
             outfile.write(json_object)
 
-        with open('nhl_divisions.json') as read_file:
+        with open('standings/nhl/nhl_divisions.json') as read_file:
             nhl_leagues = json.load(read_file)
             league = nhl_leagues['league']['name']
             conferences = nhl_leagues['conferences']
@@ -431,7 +431,7 @@ class Leagues():
         conferences = []
         divisions = []
 
-        with open('nba_2024.json') as f:
+        with open('standings/nba/nba_league_data.json') as f:
             d = json.load(f)
             results_set = d['resultSets']
         
@@ -461,7 +461,7 @@ class Leagues():
         conference_list = []
         division_list = []
         
-        with open('nhl_divisions.json') as f:
+        with open('standings/nhl/nhl_divisions.json') as f:
             nhl_leagues = json.load(f)
             conference = nhl_leagues['conferences']
 
@@ -570,7 +570,7 @@ class Standings():
         seasons = ['2020-21','2021-22','2022-23','2023-24','2024-25']
 
         for season in seasons:
-            if f'nba_stands_{season}' not in locals():
+            if f'standings/nba/nba_standings_{season}' not in locals():
                 url = f'https://stats.nba.com/stats/leaguestandings?LeagueID=00&Season={season}&SeasonType=Regular+Season&SeasonYear='
 
                 headers = {
