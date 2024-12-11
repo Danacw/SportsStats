@@ -7,8 +7,11 @@ Tables are Leagues, Teams, Seasons, and Standings. Fields and relationships are 
 
 ## Resources
 Data was sourced from the following APIs and python wrappers:
+
 **- MLB:** MLB data was retrieved from the [MLB-StatsAPI Python Wrapper](https://pypi.org/project/MLB-StatsAPI/). Data for the Seasons table with dates for the regular season, spring training, and postseason was retrieved from the `statsapi.get('seasons')` function. Data for the Leagues, Teams, and Standings tables was retrieved from `statsapi.standings_data` function. 
+
 **- NBA:** NBA data for the Leagues, Teams, and Standings tables was retrieved from the [NBA API](https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints/leaguestandings.md) Admittedly, finding the correct headers to get this API to work was a challenge. Data for the Seasons table was added manually, and is something I would change in the future.
+
 **- NHL:** NHL data for the Seasons, and Leagues tables was retrieved from the [NHL API](https://github.com/Zmalski/NHL-API-Reference?tab=readme-ov-file#nhl-stats-api-documentation) using the `https://api.nhle.com/stats/rest/season` endpoint . Data for the Teams and Standings table was retrieved from the [Sports Radar API](https://developer.sportradar.com/ice-hockey/reference/nhl-overview).
 
 ## Next Steps
