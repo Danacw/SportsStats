@@ -2,7 +2,7 @@
 A python application and Postgres database to retrieve team statistics for the NHL, NBA, and MLB. 
 
 ## Tables and Fields
-Tables are Leagues, Teams, Seasons, and Standings. Fields and relationships are outlined as per the ERD below.  
+Tables are Leagues, Teams, Seasons, and Standings. Fields and relationships are outlined as per the Entity Relationship Diagram below.  
 <img width="927" alt="Screenshot 2024-12-11 at 1 13 47 PM" src="https://github.com/user-attachments/assets/407ec0b7-eaa6-44c1-bb82-afeebc2359fe" />
 
 ## Resources
@@ -17,10 +17,10 @@ Data was sourced from the following APIs and python wrappers:
 ## Next Steps
 As I continue to develop this repository, I want to implement several changes to ensure the code remains functional, maintainable, and capable of retrieving and processing data consistently and reproducibly. Below are some initial areas of focus:
 
-- NBA Seasons: The seasonal dates were manually added, so I plan to review the API and its documentation to identify opportunities for automating the retrieval of seasonal date data. This will help ensure accuracy and reduce manual interferance.
+- **NBA Seasons:** The seasonal dates were manually added, so I plan to review the API and its documentation to identify opportunities for automating the retrieval of seasonal date data. This will help ensure accuracy and reduce manual interferance.
 
-- NHL Standings and Teams Tables: Currently, standings data is retrieved indirectly through Sports Radar. I will evaluate the NHL API to determine whether it provides a direct and more efficient method for accessing this data, potentially improving both performance and reliability.
+- **NHL Standings and Teams Tables:** Currently, standings data is retrieved indirectly through Sports Radar. I will evaluate the NHL API to determine whether it provides a direct and more efficient method for accessing this data, potentially improving both performance and reliability.
 
-- Code Standardization and Cleaning: I plan to refactor the codebase to improve standardization and maintainability. Specifically,  I want to ensure that functions within each class follow consistent design principles and operate on uniform data structures. For better organization, I will introduce a high-level dictionary structure at the top of each repective class to store key datasets for `league_data`, `seasons_data`, `teams_data`, and `standings_data`. These dictionaries will include nested dictionaries for each league. Overall, my goal is to enhance code readability and scalability while keeping in mind object-oriented programming best practices.
+- **Code Standardization and Cleaning:** I plan to refactor the codebase to improve standardization and maintainability. Specifically,  I want to ensure that functions within each class follow consistent design principles and operate on uniform data structures. For better organization, I will introduce a high-level dictionary structure at the top of each repective class to store key datasets for `league_data`, `seasons_data`, `teams_data`, and `standings_data`. These dictionaries will include nested dictionaries for each league. Overall, my goal is to enhance code readability and scalability while keeping in mind object-oriented programming best practices.
 
 
